@@ -21,5 +21,20 @@ def installGo():
 
 
 def setupVim():
-	
+	if os.path.exists("~/.vim_runtime"):
+		print "Vim runtime already exists."
+		return
 
+	os.system("sh _vim_install.sh")
+
+parser = OptionParser()
+parser.add_option("-v", "--vim", action="store_true", dest="install_vim", default=False, help="install vim")
+parser.add_option("-g", "--go", action="store_true", dest="install_go", default=False, help="install go")
+
+(options, args) = parser.parse_args()
+
+if options.install_vim :
+	setupVim()
+
+if options.install_go :
+	installGo()
