@@ -5,12 +5,13 @@ GO_URL="https://storage.googleapis.com/golang/go1.8.3.linux-amd64.tar.gz"
 GO_TAR="go1.8.3.linux-amd64.tar.gz"
 
 cd $GO_ROOT
+pwd
 if [ -d "go" ]; then
 	echo -e "Error: the folder go already exists. Please remove it."
 	exit 1
 fi
 
-mkdir go
+curl -O $GO_URL
 tar -xvf $GO_TAR
 rm $GO_TAR
 
