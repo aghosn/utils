@@ -9,7 +9,7 @@ GO_URL="https://storage.googleapis.com/golang/go1.8.3.linux-amd64.tar.gz"
 GO_TAR="go1.8.3.linux-amd64.tar.gz"
 
 def installGo():
-	if os.path.exits("~/go"):
+	if os.path.exists("~/go"):
 		print "The go folder already exists."
 		return
 
