@@ -10,6 +10,8 @@ source ~/.vim_runtime/my_configs.vim
 catch
 endtry
 
+colorscheme vice
+
 set number
 set mouse=a
 
