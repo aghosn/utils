@@ -19,6 +19,10 @@ Plugin 'flazz/vim-colorschemes'
 
 Plugin 'bcicen/vim-vice'
 
+Plugin 'terryma/vim-multiple-cursors'
+
+Plugin 'airblade/vim-gitgutter'
+
 " Turn on syntax highlighting
 syntax on
 
@@ -126,3 +130,9 @@ highlight ColorColumn ctermbg=0 guibg=lightgrey
 
 " Copy past to clipboard
 set clipboard+=unnamedplus
+
+" Notes on multicursor
+" C-n start multicursor (work in visual mode too)
+" C-x skip next match
+" C-p remove current virtual cursor + selection and go back previous match
+" select all A-n start multicursor and directly select matches
